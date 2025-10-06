@@ -1,0 +1,44 @@
+/* AccountPage.css */
+
+/* Container styling for the account page */
+.account-page {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header styling */
+.account-page h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Profile information container */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Styling for each profile information item */
+.profile-info p {
+  margin: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Label styling within profile information */
+.profile-info strong {
+  margin-right: 8px;
+  color: #222;
+}

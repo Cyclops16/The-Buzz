@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OAuth Render Test</title>
+  <meta charset="UTF-8">
+  <meta name="google-signin-client_id" content="1084206230118-b15atqgqeh8ggsrok2gt54em9e03m43g.apps.googleusercontent.com">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    function handleCredentialResponse(response) {
+      console.log('[GSI] Credential received:', response);
+
+      fetch('https://cse216-sp25-team-02.onrender.com/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ credential: response.credential })
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log('[Login response]', data);
+        if (data.status === 'ok') {
+          fetchIdeas();
+        } else {
+          alert('Login failed: ' + data.message);
+        }
+      })
+      .catch(err => console.error('[Login error]', err));
+    }
+
+    function fetchIdeas() {
+      fetch('https://cse216-sp25-team-02.onrender.com/ideas', {
+        credentials: 'include'
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log('[Ideas]', data);
+        const list = document.getElementById("ideas");
+        list.innerHTML = "";
+        data.data.forEach(idea => {
+          const li = document.createElement("li");
+          li.textContent = idea.subject || "[Untitled]";
+          list.appendChild(li);
+        });
+      });
+    }
+
+    window.onload = function () {
+      google.accounts.id.initialize({
+        client_id: "1084206230118-b15atqgqeh8ggsrok2gt54em9e03m43g.apps.googleusercontent.com",
+        callback: handleCredentialResponse
+      });
+      google.accounts.id.renderButton(
+        document.getElementById("gsiButton"),
+        { theme: "outline", size: "large" }
+      );
+    };
+  </script>
+</head>
+<body>
+  <h1>Login with Google</h1>
+  <div id="gsiButton"></div>
+  <h2>Ideas</h2>
+  <ul id="ideas"></ul>
+</body>
+</html>

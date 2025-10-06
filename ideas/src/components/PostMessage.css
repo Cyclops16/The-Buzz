@@ -1,0 +1,353 @@
+/* PostMessage.css */
+.post-message-container {
+    padding: 5px 20px 0px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start;
+    max-width: 800px;
+    margin-left: clamp(100px, 5vw, 300px);
+    margin-right: 0; /* Ensure no centering */
+}
+
+.edit-message-container {
+    padding: 5px 20px 0px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start;
+    max-width: 800px;
+    margin-left: clamp(100px, 12vw, 500px);
+    margin-right: 0; /* Ensure no centering */
+}
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .file-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .file-input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+.comment-form-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start;
+    max-width: 800px;
+    margin-left: clamp(100px, 12vw, 500px);
+    margin-right: 0; /* Ensure no centering */
+}
+
+
+.input-title, textarea {
+    display: block;       /* Ensure it takes full available width from its own styling */
+    width: 90%;           /* Responsive width based on container */
+    max-width: 400px;     /* Limits the width on larger screens */
+    padding: 10px;
+    margin: 15px 0;       /* Top and bottom margin; left is 0 by default */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: left;     /* Ensure text inside is aligned to the left */
+}
+
+
+textarea {
+    height: 120px; /* Consistent height for textarea */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: auto;
+    display: inline-block;
+    margin-left: 0; /* Align buttons to the left */
+}
+
+button:focus {
+    outline: none;
+}
+
+.post-button {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 320px; /* Space between buttons */
+}
+
+.post-button:hover {
+    background-color: hsl(122, 61%, 69%);
+}
+
+
+.post-display {
+    padding: 0px 20px 0px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start;
+    max-width: 800px;
+    margin-left: clamp(100px, 7vw, 500px);
+    margin-right: 0; /* Ensure no centering */
+}
+
+.delete-button {
+    background: none;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+  /* Style the edit icon image */
+  .delete-icon {
+    width: 20px;  /* Adjust the size as needed */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.2s ease-in-out;
+  }
+
+.delete-button:hover .delete-icon{
+    transform: scale(1.2);
+}
+
+/* Style the edit button to remove default button look */
+.comment-button {
+    background: none;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+  
+  /* Style the edit icon image */
+.comment-icon {
+    width: 20px;  /* Adjust the size as needed */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.2s ease-in-out;
+}
+
+.comment-button:hover .comment-icon {
+    transform: scale(1.2);
+}
+
+/* Style the edit button to remove default button look */
+.edit-button {
+    background: none;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+  
+  /* Style the edit icon image */
+.edit-icon {
+    width: 20px;  /* Adjust the size as needed */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.2s ease-in-out;
+}
+  
+.edit-button:hover .edit-icon {
+    transform: scale(1.2);
+}
+
+.like-button {
+    background: none;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+/* Style the edit icon image */
+.like-icon {
+    width: 20px;  /* Adjust the size as needed */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.2s ease-in-out;
+}
+
+.like-button:hover .like-icon {
+    transform: scale(1.2);
+}
+
+.dislike-button {
+    background: none;
+    margin-top: 10px;
+    margin-right: 200px;
+}
+
+/* Style the edit icon image */
+.dislike-icon {
+    width: 20px;  /* Adjust the size as needed */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.dislike-button:hover .dislike-icon {
+    transform: scale(1.2);
+}
+
+.post-display {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align post items to the left */
+}
+
+.post-item {
+    width: clamp(400px, 40vw, 1000px);
+    border-radius: 4px;
+    padding: 0px 10px 10px;                             /* reduced padding */
+    margin-bottom: 10px;                        /* tighter spacing between posts */
+    background-color: #e6e6e6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);      /* subtle lift */
+    box-sizing: border-box;
+    text-align: left;                           /* override any inherited centering */
+  }
+
+  /* Headings and paragraphs inside posts */
+.post-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  
+  .post-item p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+    text-align: left;
+  }
+  .post-author {
+    display: inline-block;
+    background-color: #e6f0ff;
+    color: #1a3c6c;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  .profile-popup {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  
+  .profile-popup.hidden {
+    opacity: 0;
+  }
+  
+
+/*—— Comments: Post & Edit buttons with no background ——*/
+.comment-section > button,
+.comment-section ul li > button {
+  background: none;
+  border: none;
+  padding: 0.25em 0.5em;   /* a little breathing room */
+  margin-left: 0.5em;      /* space from the text */
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #007bff;           /* link‑style blue—pick your favorite */
+  text-align: left;        /* align text with the comment */
+}
+
+.comment-section > button:hover,
+.comment-section ul li > button:hover {
+  text-decoration: underline;
+}
+.comment-item {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.comment-header {
+  margin-bottom: 5px;
+}
+
+.comment-username {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.comment-body p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.comment-attachment {
+  display: inline-block;
+  margin-top: 5px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.comment-attachment:hover {
+  text-decoration: underline;
+}
+
+/* Optionally adjust the list item so the buttons don’t jump the line */
+.comment-section ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;  /* space between comment text and buttons */
+}
+
+/* Center the entire comment block */
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* center the children horizontally */
+  }
+  
+  /* Make the <ul> shrink to its contents and center it */
+  .comment-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: inline-block; /* so we can auto‑center it */
+  }
+  
+  /* Style each <li> and keep it centered */
+  .comment-section ul li {
+    display: block;
+    margin: 6px auto;     /* vertical spacing, auto horizontal centering */
+    text-align: center;   /* center text within each comment */
+    /* optional: give them a pill‑shaped background for readability */
+    background: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    max-width: 80%;       /* prevent overly long lines */
+    word-wrap: break-word;
+  }
+  
+
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px; /* Add spacing below title */
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}

@@ -1,0 +1,34 @@
+.TopBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1in;
+    background-color: #fef7ff;
+    display: flex;
+    align-items: center; /* Center vertically */
+    padding: 0 20px; /* Adjust padding if needed */
+    z-index: 10;
+  }
+  
+  .TopBarTitle {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 35px;
+    color: #000000;
+    margin: 0;
+    margin-left: clamp(10px, 4vw, 500px); /* Add margin-left to create space between the button and title */
+  }
+  
+  .ToggleButton {
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    z-index: 20;
+  }
+
+  .ToggleButton:hover {
+    color: grey;
+  }

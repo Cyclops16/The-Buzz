@@ -1,0 +1,35 @@
+/* loginPage.css */
+
+/* Ensure the full viewport height for centering */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Center the login container both vertically and horizontally */
+  .login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+  }
+  
+  /* Optional styling for the heading */
+  .login-page h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  /* Scale down the Google Sign-In button */
+  #googleSignInDiv {
+    /* Use transform to reduce the size of the rendered button */
+    transform: scale(0.8);
+    transform-origin: center;
+    /* Optional: adjust width if needed */
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
